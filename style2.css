@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #f0f8ff;
+    color: #003366;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 0.5rem 1rem;
+    background-color: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #005b99;
+}
+
+main {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    text-align: center; 
+    position: relative;
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.cartao-projeto {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+}
+
+.cartao-projeto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cartao-projeto p {
+    font-size: 1.1rem;
+    color: #003366;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem;
+    background-color: #003366;
+    color: #fff;
+    width: 100%;
+}
+
+.rodape-conteudo {
+    flex: 1;
+    text-align: center;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.botao-social {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 150px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botao-social.linkedin {
+    background-color: #0077b5; 
+}
+
+.botao-social.github {
+    background-color: #333; 
+}   
+
+.botao-social.github:hover {
+    background-color: #24292f; 
+}
+
+:root {
+    --background-light: #e0e9f0;
+    --text-light: #003366; 
+    --header-light: #003366; 
+    --link-light: #004080; 
+    
+    --background-dark: #0d1a2b; 
+    --text-dark: #e0e9f0; 
+    --header-dark: #003366; 
+    --link-dark: #70a1d7; 
+}
+
+body.modo-escuro {
+    background-color: var(--background-dark);
+    color: var(--text-dark); 
+}
+
+body.modo-escuro header {
+    background-color: var(--header-dark); 
+}
+
+body.modo-escuro header nav a {
+    color: var(--link-dark);
+}
+
+body.modo-escuro footer {
+    background-color: var(--header-dark); 
+}
+
+body.modo-escuro .cartao-projeto {
+    background-color: #1a2a3a; 
+    color: var(--text-dark);
+}
+
+body.modo-escuro .cartao-projeto p {
+    color: var(--text-dark); 
+}
+
+body.modo-escuro .cartao-projeto img {
+    filter: brightness(0.7); 
+}
+
+body.modo-escuro header button {
+    color: var(--link-dark); 
+}
+
+body.modo-escuro header button:hover {
+    color: var(--link-dark); 
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav a {
+        margin: 10px 0;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+}
